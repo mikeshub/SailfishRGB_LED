@@ -11,10 +11,6 @@
 #define SAILFISHRGB_LED_H_
 
 #include <Arduino.h>
-//#include <Wire.h>
-#include <util/twi.h>
-
-#define ENABLE_I2C_PULLUPS
 
 #define SET_COLOR(r,g,b,c) RGB_LED::setColor((r),(g),(b),(c))
 
@@ -53,8 +49,6 @@ enum LEDColors {
 };
 
 
-//#include "Types.hh"
-
 extern bool LEDEnabled;
 void RGBinit();
 void RGBclear();
@@ -62,11 +56,6 @@ void RGBerrorSequence();
 void RGBsetColor(uint8_t red, uint8_t green, uint8_t blue, bool clearOld = true);
 void RGBsetDefaultColor(uint8_t c = 0xff);
 void RGBsetCustomColor(uint8_t red, uint8_t green, uint8_t blue);
-#ifdef PCA9533
-struct LEDColor;
-typedef LEDColor LEDColor;
 
-void pca9533_set_led_color(const LEDColor &color);
-#endif
 
 #endif /* SAILFISHRGB_LED_H_ */
