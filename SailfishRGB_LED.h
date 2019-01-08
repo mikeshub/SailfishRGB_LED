@@ -12,6 +12,8 @@
 
 #include <Arduino.h>
 
+#define ENABLE_I2C_PULLUPS
+
 #define SET_COLOR(r,g,b,c) RGB_LED::setColor((r),(g),(b),(c))
 
 // LED control registers
@@ -48,6 +50,8 @@ enum LEDColors {
 	LED_DEFAULT_CUSTOM
 };
 
+
+//#include "Types.hh"
 
 extern bool LEDEnabled;
 void RGBinit();

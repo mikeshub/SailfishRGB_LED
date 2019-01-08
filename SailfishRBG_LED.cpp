@@ -76,11 +76,11 @@ static void setBrightness(uint8_t Channel, uint8_t level, uint8_t LEDs) {
   Wire.beginTransmission(LEDAddress);
   Wire.write(data1, 2);
   Wire.endTransmission();
-  _delay_us(1);
+  delayMicroseconds(1);
   Wire.beginTransmission(LEDAddress);
   Wire.write(data2, 2);
   Wire.endTransmission();
-  _delay_us(1);
+  delayMicroseconds(1);
 
   LEDSelect = data1[1];
 
@@ -113,11 +113,11 @@ static void setBlinkRate(uint8_t Channel, uint8_t LEDs, uint8_t rate) {
   Wire.beginTransmission(LEDAddress);
   Wire.write(data1, 2);
   Wire.endTransmission();
-  _delay_us(1);
+  delayMicroseconds(1);
   Wire.beginTransmission(LEDAddress);
   Wire.write(data2 , 2);
   Wire.endTransmission();
-  _delay_us(1);
+  delayMicroseconds(1);
 
   LEDSelect = data1[1];
 }
