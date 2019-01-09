@@ -18,7 +18,7 @@
 #include "SailfishRGB_LED.h"
 #include <Wire.h>
 
-const static int LEDAddress = 0B11000100;
+const static int LEDAddress = 0x62;
 uint8_t LEDSelect = 0;
 bool LEDEnabled = true;
 
