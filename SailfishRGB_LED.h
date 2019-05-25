@@ -30,9 +30,9 @@
 #define LED_OFF	0b00000000
 
 // RBG IDs
-#define LED_GREEN 0b00001100
-#define LED_RED 0b00000011
-#define LED_BLUE 0b00110000
+#define LED_RED 0b00110000
+#define LED_GREEN 0b00000011
+#define LED_BLUE 0b00001100
 
 // Channel IDs
 #define LED_CHANNEL1	0
